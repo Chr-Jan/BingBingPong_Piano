@@ -42,8 +42,6 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-                <Rectangle Fill="Black" Height="20" VerticalAlignment="Top" Grid.ColumnSpan="5"/>
-
                 <Border Grid.Column="0" 
                     Grid.RowSpan="2" 
                     CornerRadius="30">
