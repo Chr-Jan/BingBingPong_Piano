@@ -28,7 +28,7 @@ namespace PianoMeme.View
 
         private void Note1_Click(object sender, RoutedEventArgs e)
         {
-            SoundPlayer player = new SoundPlayer(@"D:\\GitHub\\Personlige Projekter\\HomeProjects\\PianoMeme\\sound\\boing-1.wav");
+            SoundPlayer player = new SoundPlayer(@"D:\GitHub\Personlige Projekter\PianoMEME\sound\boing-1.wav");
             player.Load();
             player.Play();
         }

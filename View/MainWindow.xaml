@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:PianoMeme"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="650" 
-        Width="1000"
+        Height="850" 
+        Width="1200"
         Background="Transparent"
         KeyDown="MainWindow_KeyDown">
 
@@ -19,9 +19,16 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
+    <Grid>
+        <Border CornerRadius="30" Background="DarkSlateGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    </Border>
 
     <Border>
-        <Grid>
+        <Grid Height="650"
+              Width="1000"
+              HorizontalAlignment="Center"
+              Margin="0,100,0,0">
+            
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="200"/>
@@ -35,42 +42,90 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Border Grid.Column="0" Grid.RowSpan="2" CornerRadius="30" Margin="0,-20,0,0">
-                <Button Content="1" Style="{StaticResource WhiteKeyButtonStyle}" Click="Note1_Click" Tag="sounds/boing-1.wav"/>
+                <Rectangle Fill="Black" Height="20" VerticalAlignment="Top" Grid.ColumnSpan="5"/>
+
+                <Border Grid.Column="0" 
+                    Grid.RowSpan="2" 
+                    CornerRadius="30">
+                <Button Content="1" 
+                        Style="{StaticResource WhiteKeyButtonStyle}" 
+                        Click="Note1_Click" 
+                        Tag="sounds/boing-1.wav"/>
             </Border>
 
-            <Border Grid.Column="1" Grid.RowSpan="2" CornerRadius="30" Margin="0,-20,0,0">
-                <Button Content="2" Style="{StaticResource WhiteKeyButtonStyle}" Click="Note2_Click" />
+            <Border Grid.Column="1" 
+                    Grid.RowSpan="2" 
+                    CornerRadius="30">
+                <Button Content="2" 
+                        Style="{StaticResource WhiteKeyButtonStyle}" 
+                        Click="Note2_Click" />
             </Border>
 
-            <Border Grid.Column="2" Grid.RowSpan="2" CornerRadius="30" Margin="0,-20,0,0">
-                <Button Content="3" Style="{StaticResource WhiteKeyButtonStyle}" Click="Note3_Click" />
+            <Border Grid.Column="2" 
+                    Grid.RowSpan="2" 
+                    CornerRadius="30">
+                <Button Content="3" 
+                        Style="{StaticResource WhiteKeyButtonStyle}" 
+                        Click="Note3_Click" />
             </Border>
 
-            <Border Grid.Column="3" Grid.RowSpan="2" CornerRadius="30" Margin="0,-20,0,0">
-                <Button Content="4" Style="{StaticResource WhiteKeyButtonStyle}" Click="Note4_Click" />
+            <Border Grid.Column="3" 
+                    Grid.RowSpan="2" 
+                    CornerRadius="30">
+                <Button Content="4" 
+                        Style="{StaticResource WhiteKeyButtonStyle}" 
+                        Click="Note4_Click" />
             </Border>
 
-            <Border Grid.Column="4" Grid.RowSpan="2" CornerRadius="30" Margin="0,-20,0,0">
-                <Button Content="5" Style="{StaticResource WhiteKeyButtonStyle}" Click="Note5_Click" />
+            <Border Grid.Column="4" 
+                    Grid.RowSpan="2" 
+                    CornerRadius="30">
+                <Button Content="5" 
+                        Style="{StaticResource WhiteKeyButtonStyle}" 
+                        Click="Note5_Click" />
             </Border>
 
-            <Border Grid.ColumnSpan="2" CornerRadius="30" Margin="150,-20,150,0">
-                <Button Content="#1" Foreground="AntiqueWhite" Style="{StaticResource BlackKeyButtonStyle}" Click="Note1Shift_Click"/>
+            <Border Grid.ColumnSpan="2" 
+                    CornerRadius="30" 
+                    Margin="150,0,150,0">
+                <Button Content="#1" 
+                        Foreground="AntiqueWhite" 
+                        Style="{StaticResource BlackKeyButtonStyle}" 
+                        Click="Note1Shift_Click"/>
             </Border>
 
-            <Border Grid.ColumnSpan="2" CornerRadius="30" Margin="150,-20,150,0" Grid.Column="1">
-                <Button Content="#2" Foreground="AntiqueWhite" Style="{StaticResource BlackKeyButtonStyle}" Click="Note2Shift_Click"/>
+            <Border Grid.ColumnSpan="2" 
+                    CornerRadius="30" 
+                    Margin="150,0,150,0" 
+                    Grid.Column="1">
+                <Button Content="#2" 
+                        Foreground="AntiqueWhite" 
+                        Style="{StaticResource BlackKeyButtonStyle}" 
+                        Click="Note2Shift_Click"/>
             </Border>
 
-            <Border Grid.ColumnSpan="2" CornerRadius="30" Margin="150,-20,150,0" Grid.Column="2">
-                <Button Content="#3" Foreground="AntiqueWhite" Style="{StaticResource BlackKeyButtonStyle}" Click="Note3Shift_Click"/>
+            <Border Grid.ColumnSpan="2" 
+                    CornerRadius="30" 
+                    Margin="150,0,150,0" 
+                    Grid.Column="2">
+                <Button Content="#3" 
+                        Foreground="AntiqueWhite" 
+                        Style="{StaticResource BlackKeyButtonStyle}" 
+                        Click="Note3Shift_Click"/>
             </Border>
 
-            <Border Grid.ColumnSpan="2" CornerRadius="30" Margin="150,-20,150,0" Grid.Column="3">
-                <Button Content="#4" Foreground="AntiqueWhite" Style="{StaticResource BlackKeyButtonStyle}" Click="Note4Shift_Click"/>
+            <Border Grid.ColumnSpan="2" 
+                    CornerRadius="30" 
+                    Margin="150,0,150,0" 
+                    Grid.Column="3">
+                <Button Content="#4" 
+                        Foreground="AntiqueWhite" 
+                        Style="{StaticResource BlackKeyButtonStyle}" 
+                        Click="Note4Shift_Click"/>
             </Border>
-
-        </Grid>
+                <Rectangle Fill="DarkSlateGray" Height="20" VerticalAlignment="Top" Grid.ColumnSpan="5" Grid.Row="0" StrokeThickness="0" SnapsToDevicePixels="True" UseLayoutRounding="True" />
+            </Grid>
     </Border>
+    </Grid>
+    
 </Window>
