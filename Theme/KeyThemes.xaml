@@ -1,0 +1,67 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Define the colors -->
+    <!-- White keys -->
+
+    <SolidColorBrush x:Key="KeyColor" Color="#FFEBE8E8" />
+    <SolidColorBrush x:Key="KeyColorLight" Color="#FFEAE6E6" />
+    <SolidColorBrush x:Key="KeyColorDark" Color="#FFDFDBDB" />
+
+    <!-- Black keys -->
+
+    <SolidColorBrush x:Key="BlackKeyColor" Color="Black" />
+    <SolidColorBrush x:Key="BlackKeyColorLight" Color="#333333" />
+    <SolidColorBrush x:Key="BlackKeyColorDark" Color="#1E1E1E" />
+
+
+    <!-- Define the button style -->
+    <Style x:Key="WhiteKeyButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource KeyColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource KeyColorLight}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource KeyColorDark}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="BlackKeyButtonStyle" TargetType="Button">
+        <Setter Property="Background" Value="{StaticResource BlackKeyColor}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="5">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource BlackKeyColorLight}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource BlackKeyColorDark}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
