@@ -21,14 +21,17 @@ namespace PianoMeme.View
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string basePath;
         public MainWindow()
         {
             InitializeComponent();
+            basePath = @"D:\GitHub\Personlige Projekter\PianoMeme\sound\";
         }
-
+        // soundFile bliver brugt til fil navnet
         private void PlaySound(string soundFile)
         {
-            using (SoundPlayer player = new SoundPlayer(soundFile))
+            string fullPath = basePath + soundFile;
+            using (SoundPlayer player = new SoundPlayer(fullPath))
             {
                 player.Load();
                 player.Play();
@@ -36,47 +39,47 @@ namespace PianoMeme.View
         }
         private void Note1_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMEME\sound\boing.wav");
+            PlaySound("boing.wav");
         }
 
         private void Note2_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMEME\sound\jews-harp.wav");
+            PlaySound("jews-harp.wav");
         }
 
         private void Note3_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\comedic-boing.wav");
+            PlaySound("comedic-boing.wav");
         }
 
         private void Note4_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\juskiddink__boing.wav");
+            PlaySound("juskiddink__boing.wav");
         }
 
         private void Note5_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\springboard-b.wav");
+            PlaySound("springboard-b.wav");
         }
 
         private void Note1Shift_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\foam-pluck.wav");
+            PlaySound("foam-pluck.wav");
         }
 
         private void Note2Shift_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\popsicle-stick-pluck.wav");
+            PlaySound("popsicle-stick-pluck.wav");
         }
 
         private void Note3Shift_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\funny-boing.wav");
+            PlaySound("funny-boing.wav");
         }
 
         private void Note4Shift_Click(object sender, RoutedEventArgs e)
         {
-            PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\battery-compartment-spring.wav");
+            PlaySound("battery-compartment-spring.wav");
         }
 
         private void MainWindow_KeyDown(object sender, KeyEventArgs e)
@@ -85,11 +88,11 @@ namespace PianoMeme.View
             {
                 if (Keyboard.Modifiers == ModifierKeys.Shift)
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\foam-pluck.wav");
+                    PlaySound("foam-pluck.wav");
                 }
                 else
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMEME\sound\boing.wav");
+                    PlaySound("boing.wav");
                 }
             }
 
@@ -97,11 +100,11 @@ namespace PianoMeme.View
             {
                 if (Keyboard.Modifiers == ModifierKeys.Shift)
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\popsicle-stick-pluck.wav");
+                    PlaySound("popsicle-stick-pluck.wav");
                 }
                 else
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMEME\sound\jews-harp.wav");
+                    PlaySound("jews-harp.wav");
                 }
             }
 
@@ -109,11 +112,11 @@ namespace PianoMeme.View
             {
                 if (Keyboard.Modifiers == ModifierKeys.Shift)
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\funny-boing.wav");
+                    PlaySound("funny-boing.wav");
                 }
                 else
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\comedic-boing.wav");
+                    PlaySound("comedic-boing.wav");
                 }
             }
 
@@ -121,17 +124,17 @@ namespace PianoMeme.View
             {
                 if (Keyboard.Modifiers == ModifierKeys.Shift)
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\battery-compartment-spring.wav");
+                    PlaySound("battery-compartment-spring.wav");
                 }
                 else
                 {
-                    PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\juskiddink__boing.wav");
+                    PlaySound("juskiddink__boing.wav");
                 }
             }
 
             if (e.Key == Key.D5)
             {
-                PlaySound(@"D:\GitHub\Personlige Projekter\PianoMeme\sound\springboard-b.wav");
+                PlaySound("springboard-b.wav");
             }
         }
 
