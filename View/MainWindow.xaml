@@ -15,19 +15,23 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="../Theme/KeyThemes.xaml" />
-                <!-- Other merged dictionaries if any -->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <Border CornerRadius="30" Background="DarkSlateGray" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Border CornerRadius="30" 
+                Background="DarkSlateGray" 
+                HorizontalAlignment="Stretch" 
+                VerticalAlignment="Stretch">
     </Border>
 
+        
     <Border>
         <Grid Height="650"
               Width="1000"
               HorizontalAlignment="Center"
               Margin="0,100,0,0">
+            
             
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>

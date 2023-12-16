@@ -25,7 +25,7 @@ namespace PianoMeme.View
         public MainWindow()
         {
             InitializeComponent();
-            basePath = @"D:\GitHub\Personlige Projekter\PianoMeme\sound\";
+            basePath = @"Change to the path for the Sound folder";
         }
         // soundFile bliver brugt til fil navnet
         private void PlaySound(string soundFile)
