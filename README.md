@@ -22,5 +22,7 @@ public MainWindow()
 
 Replace `"Specify the path for your Sound folder"` with the actual path to your sound folder, transforming your coding space into a concert hall of endless possibilities.
 
+<img src="github_images/BingBingPongPiano.png"/>
+
 #### Sound effects can be found here:
 https://freesound.org
